@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Server {
     public static void main(String[] args) {
-        try (ServerSocket serverSocket = new ServerSocket(6000)) {
+        try (ServerSocket serverSocket = new ServerSocket(3000)) {
             System.out.println("Server is running... Waiting for student data.");
             
-            // Data Structures as per requirement
+         
             HashMap<Integer, Integer[]> studentMarksMap = new HashMap<>();
             List<String> namesList = new ArrayList<>();
 
@@ -17,17 +17,17 @@ public class Server {
                 
                 String data = reader.readLine();
                 if (data != null) {
-                    // Split data: ID, Name, Marks
+                    
                     String[] parts = data.split(",");
                     int id = Integer.parseInt(parts[0]);
                     String name = parts[1];
                     int marks = Integer.parseInt(parts[2]);
 
-                    // Store in Collections
+                  
                     studentMarksMap.put(id, new Integer[]{marks});
                     namesList.add(name);
 
-                    // Display Records
+                   
                     System.out.println("\n--- Current Student Records ---");
                     String[] namesArray = namesList.toArray(new String[0]);
                     int index = 0;
