@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Server {
     public static void main(String[] args) {
-        try (ServerSocket serverSocket = new ServerSocket(5000)) {
+        try (ServerSocket serverSocket = new ServerSocket(6000)) {
             System.out.println("Server is running... Waiting for student data.");
             
             // Data Structures as per requirement
